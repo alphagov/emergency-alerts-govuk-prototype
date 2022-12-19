@@ -52,6 +52,74 @@
     border-top: 10px solid #1d70b8;
 }
 
+  .defra-flood-status-item__text 
+
+{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding: 15px 15px 15px 0px;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+
+.defra-flood-status-item .defra-flood-status-item__icon:after {
+    display: block;
+    content: '';
+    background: transparent url(red-alert.svg) no-repeat;
+    background-size: 80px 200px;
+    width: 40px;
+    height: 40px;
+}
+
+@media (min-width: 40.0625em)
+.defra-flood-status-item .defra-flood-status-item__icon:after {
+    background-size: 100px 250px;
+    width: 50px;
+    height: 50px;
+}
+
+.defra-flood-status-item--warning .defra-flood-status-item__icon:after {
+    background-position: 100% 25%;
+}
+
+
+.govuk-inset-text, .defra-flood-status-item {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    border-left: 10px solid #b1b4b6;
+}
+
+@media (min-width: 40.0625em)
+.govuk-inset-text, .defra-flood-status-item {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+}
+
+
+@media (min-width: 40.0625em)
+.defra-flood-status-item .defra-flood-status-item__icon {
+    padding: 10px 12.5px;
+}
+
+  
 </style>
 
     
