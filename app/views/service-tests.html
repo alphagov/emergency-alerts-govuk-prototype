@@ -51,6 +51,33 @@
 .govuk-footer {
     border-top: 10px solid #1d70b8;
 }
+.hmrc-language-select {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.14286;
+}
+@media print {
+    .hmrc-language-select {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .hmrc-language-select {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+@media print {
+    .hmrc-language-select {
+        font-size: 14pt;
+        line-height: 1.2;
+    }
+}
 .hmrc-language-select:after {
     clear: both;
     content: "";
@@ -255,7 +282,6 @@
       </h2>--->
       
       <p>There are currently no Emergency Alerts service tests.</p>
-      <p>You can see previous tests on the <a href="past-alerts.html" class="govuk-link">past alerts page</a>.</p>
 
     </div>
 

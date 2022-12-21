@@ -51,7 +51,6 @@
 .govuk-footer {
     border-top: 10px solid #1d70b8;
 }
-}
 .hmrc-language-select {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -109,6 +108,61 @@
         font-feature-settings: normal;
         font-variant-numeric: tabular-nums;
     }
+}
+.app-content {
+    padding: 20px;
+}
+@media (min-width: 40.0625em) {
+    .app-content {
+        padding: 30px;
+    }
+}
+.app-content ul:not(.app-tabs) {
+    max-width: 38em;
+}
+.app-example {
+    background: #f3f2f1;
+    border: 1px solid #b1b4b6;
+    position: relative;
+}
+.app-example-page {
+    padding: 60px 30px 30px;
+}
+.app-example__link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f3f2f1;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+@media print {
+    .app-example__link {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .app-example__link {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857;
+    }
+}
+@media print {
+    .app-example__link {
+        font-size: 12pt;
+        line-height: 1.2;
+    }
+}
+.app-example__link a {
+    color: #1d70b8;
+    text-decoration: none;
 }
 </style>
 
