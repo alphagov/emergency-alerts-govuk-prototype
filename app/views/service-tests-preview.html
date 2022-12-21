@@ -51,7 +51,92 @@
 .govuk-footer {
     border-top: 10px solid #1d70b8;
 }
-
+.hmrc-language-select:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.hmrc-language-select__list {
+    float: right;
+    margin-top: 1em;
+    text-align: right;
+}
+.hmrc-language-select__list-item {
+    display: inline-block;
+}
+.hmrc-language-select__list-item:first-child:after {
+    border-right: 0.09375em solid #0b0c0c;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    top: 0.1875em;
+}
+.hmrc-language-select__list-item [aria-current],
+.hmrc-language-select__list-item a {
+    padding: 0.3125em;
+}
+@supports (font-variant-numeric: tabular-nums) {
+    .hmrc-character-count__message {
+        font-feature-settings: normal;
+        font-variant-numeric: tabular-nums;
+    }
+}
+.app-content {
+    padding: 20px;
+}
+@media (min-width: 40.0625em) {
+    .app-content {
+        padding: 30px;
+    }
+}
+.app-content ul:not(.app-tabs) {
+    max-width: 38em;
+}
+.app-example {
+    background: #f3f2f1;
+    border: 1px solid #b1b4b6;
+    position: relative;
+}
+.app-example-page {
+    padding: 60px 30px 30px;
+}
+.app-example__link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f3f2f1;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+@media print {
+    .app-example__link {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .app-example__link {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857;
+    }
+}
+@media print {
+    .app-example__link {
+        font-size: 12pt;
+        line-height: 1.2;
+    }
+}
+.app-example__link a {
+    color: #1d70b8;
+    text-decoration: none;
+}
 </style>
 
     
@@ -121,7 +206,6 @@
       <h1 class="govuk-heading-xl">
         Emergency Alerts service tests
       </h1>    
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-8">
 
       <!---<aside class="app-mainstream-guide-contents-list" role="complementary">
         <nav class="app-contents-list" aria-label="Pages in this guide" role="navigation">
@@ -147,7 +231,20 @@
       </aside>--->
 
     </div>
-
+    <div class="govuk-grid-column-one-third">
+      <nav class="hmrc-language-select" aria-label="Language switcher">
+      <ul class="hmrc-language-select__list">
+        <li class="hmrc-language-select__list-item">
+          <span aria-current="true">English</span>
+        </li>
+        <li class="hmrc-language-select__list-item">
+          <a href="index-1.htm?cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
+            <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+            <span aria-hidden="true">Cymraeg</span>
+          </a>
+        </li>
+      </ul>
+      </div>
   </div>
 
   <div class="govuk-grid-row">
@@ -157,14 +254,14 @@
         How emergency alerts work
       </h2>--->
       
-      <p>TThere will be a mobile phone network test of the UK Emergency Alerts service today.</p>
+      <p>There will be a mobile phone network test of the UK Emergency Alerts service today.</p>
       <p>Most mobile phones and tablets will not get a test alert.</p>
       <p>Find out more about <a href="system-testing.html" class="govuk-link">testing the emergency alerts system</a>.</p>
       <p>The alert will say:</p>
       <div class="govuk-inset-text">
         This is a mobile network operator test of the UK Emergency Alerts service. You do not need to take any action. To find out more, visit <a href="alerts">gov.uk/alerts</a> and see Emergency Alerts service tests.
       </div>
-      <p>or</p>
+      <p>OR</p>
       <div class="govuk-inset-text">
         This is a government test of the UK Emergency Alerts service. You do not need to take any action. To find out more, visit <a href="alerts">gov.uk/alerts</a> and see Emergency Alerts service tests.
       </div>
@@ -184,16 +281,18 @@
                 About Emergency Alerts
               </a>
             </li>
-    <li>
+            <li>
+              <a href="how-alerts-work.html">
+                How Emergency Alerts works
+              </a>
+            </li>
+            
+            <li>
               <a href="system-testing.html">
                 Testing the Emergency Alerts system
               </a>
             </li>
-    <li>
-              <a href="planned-emergency-alerts-tests.html">
-                Planned emergency alerts tests
-              </a>
-            </li>
+    
     <li>
               <a href="current-emergency-alerts">
                 Current emergency alerts

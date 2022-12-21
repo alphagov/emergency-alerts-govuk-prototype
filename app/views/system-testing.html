@@ -51,7 +51,119 @@
 .govuk-footer {
     border-top: 10px solid #1d70b8;
 }
-
+.hmrc-language-select {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.14286;
+}
+@media print {
+    .hmrc-language-select {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .hmrc-language-select {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+@media print {
+    .hmrc-language-select {
+        font-size: 14pt;
+        line-height: 1.2;
+    }
+}
+.hmrc-language-select:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.hmrc-language-select__list {
+    float: right;
+    margin-top: 1em;
+    text-align: right;
+}
+.hmrc-language-select__list-item {
+    display: inline-block;
+}
+.hmrc-language-select__list-item:first-child:after {
+    border-right: 0.09375em solid #0b0c0c;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    position: relative;
+    top: 0.1875em;
+}
+.hmrc-language-select__list-item [aria-current],
+.hmrc-language-select__list-item a {
+    padding: 0.3125em;
+}
+@supports (font-variant-numeric: tabular-nums) {
+    .hmrc-character-count__message {
+        font-feature-settings: normal;
+        font-variant-numeric: tabular-nums;
+    }
+}
+.app-content {
+    padding: 20px;
+}
+@media (min-width: 40.0625em) {
+    .app-content {
+        padding: 30px;
+    }
+}
+.app-content ul:not(.app-tabs) {
+    max-width: 38em;
+}
+.app-example {
+    background: #f3f2f1;
+    border: 1px solid #b1b4b6;
+    position: relative;
+}
+.app-example-page {
+    padding: 60px 30px 30px;
+}
+.app-example__link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f3f2f1;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+@media print {
+    .app-example__link {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .app-example__link {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857;
+    }
+}
+@media print {
+    .app-example__link {
+        font-size: 12pt;
+        line-height: 1.2;
+    }
+}
+.app-example__link a {
+    color: #1d70b8;
+    text-decoration: none;
+}
 </style>
 
     
@@ -121,7 +233,6 @@
       <h1 class="govuk-heading-xl">
         Testing the Emergency Alerts system
       </h1>    
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-8">
 
       <!---<aside class="app-mainstream-guide-contents-list" role="complementary">
         <nav class="app-contents-list" aria-label="Pages in this guide" role="navigation">
@@ -147,7 +258,20 @@
       </aside>--->
 
     </div>
-
+    <div class="govuk-grid-column-one-third">
+      <nav class="hmrc-language-select" aria-label="Language switcher">
+      <ul class="hmrc-language-select__list">
+        <li class="hmrc-language-select__list-item">
+          <span aria-current="true">English</span>
+        </li>
+        <li class="hmrc-language-select__list-item">
+          <a href="index-1.htm?cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
+            <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+            <span aria-hidden="true">Cymraeg</span>
+          </a>
+        </li>
+      </ul>
+      </div>
   </div>
 
   <div class="govuk-grid-row">
@@ -169,7 +293,7 @@
       </h2>
 
       <p>The government and mobile network operators occasionally carry out emergency alerts service tests across the UK.</p>
-      <p>These are different from national tests. You’ll only get service test alerts if you have an older Android phone or tablet with operator test alerts turned on.</p>
+      <p>These are different from national tests. You’ll only get <a href="service-tests.html">service test alerts</a> if you have an older Android phone or tablet with operator test alerts turned on.</p>
       <p>Your device may make a loud siren-like sound for about 10 seconds. You do not need to take action.</p>
       <p>To opt out of service alerts, turn off ‘test alerts’ in your settings. If you still get alerts, contact your device manufacturer for help.</p>
 
@@ -196,13 +320,13 @@
               </a>
             </li>
     <li>
-              <a href="system-testing.html">
-                Testing the Emergency Alerts system
+              <a href="how-alerts-work.html">
+                How emergency alerts works
               </a>
             </li>
     <li>
               <a href="planned-tests.html">
-                Planned emergency alerts tests
+                Emergency Alerts service tests
               </a>
             </li>
     <li>
