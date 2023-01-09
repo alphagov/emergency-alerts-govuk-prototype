@@ -31,6 +31,63 @@
   
 <style> 
   
+  .responsive-embed--16by9 .responsive-embed__content {
+    padding-bottom: 56.25%!important;
+}
+  
+  
+  @media (min-width: 40.0625em)
+.responsive-embed {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.responsive-embed {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.responsive-embed--16by9 .responsive-embed__content {
+    padding-bottom: 56.25%;
+}
+
+.responsive-embed .responsive-embed__content {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.responsive-embed .responsive-embed__item, .responsive-embed iframe, .responsive-embed embed, .responsive-embed object, .responsive-embed video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+iframe[Attributes Style] {
+    width: 560px;
+    height: 315px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+
+
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+  
 ul.hmrc-language-select__list {
     padding-inline-start: 0px!important;
 }
@@ -632,8 +689,14 @@ ul.hmrc-language-select__list {
 <p>The sound and vibration will last for about 10 seconds.</p>
 <p>An alert will include a phone number or a link to the GOV.UK website for more information.</p>
 <p>You’ll get alerts based on your current location – not where you live or work. You do not need to turn on location services to receive alerts.</p>
-<iframe width="548" height="308.5" src="https://www.youtube.com/embed/9yLd2AjGzYI" title="UK Emergency Alerts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<div class="govuk-!-padding-bottom-8"></div>
+ 
+      <div class="responsive-embed responsive-embed--16by9">
+        <div class="responsive-embed__content">
+          <iframe title="UK Emergency Alerts" width="560" height="315" src="https://www.youtube-nocookie.com/embed/9yLd2AjGzYI" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      
+      <div class="govuk-!-padding-bottom-8"></div>
 <h2 class="govuk-heading-l">
   What you need to do
 </h2>
