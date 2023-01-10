@@ -29,6 +29,102 @@
   <script src="/javascripts/vendor/modernizr.js"></script>
     <link href="/styles/page-template/block-areas/block-areas-annotate-009423015509ad9b74ca659857b6b92e.css" rel="stylesheet" media="all">
     
+    <style>
+      
+      div {
+    display: block;
+}
+
+.govuk-skip-link:link, .govuk-skip-link:visited {
+    color: #0b0c0c;
+}
+
+
+
+@supports (padding: max(calc(0px)))
+.govuk-skip-link {
+    padding-right: max(15px, calc(15px + env(safe-area-inset-right)));
+    padding-left: max(15px, calc(15px + env(safe-area-inset-left)));
+}
+
+
+@media (min-width: 40.0625em)
+.govuk-skip-link {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+
+
+.govuk-skip-link {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1em;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.1428571429;
+    display: block;
+    padding: 10px 15px;
+}
+
+
+
+@media (min-width: 40.0625em)
+.govuk-skip-link {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+
+
+.govuk-skip-link:link, .govuk-skip-link:visited {
+    color: #0b0c0c;
+}
+
+
+.app-annotate-block__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.5em;
+    border-right: 2px dashed #505a5f;
+    border-bottom: 2px dashed #505a5f;
+    background: #fff;
+    font-family: "GDS Transport",arial,sans-serif;
+}
+
+@supports (padding: max(calc(0px)))
+.govuk-skip-link {
+    padding-right: max(15px, calc(15px + env(safe-area-inset-right)));
+    padding-left: max(15px, calc(15px + env(safe-area-inset-left)));
+}
+
+
+
+
+.govuk-template {
+    background-color: #f3f2f1;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+    </style>
   </head>
   <body class="govuk-template__body ">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
