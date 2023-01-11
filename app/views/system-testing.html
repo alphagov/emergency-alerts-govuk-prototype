@@ -30,6 +30,13 @@
 
   
 <style> 
+  
+  .hmrc-language-select__list {
+    float: left!important;
+    margin-top: 1em;
+    text-align: left!important;
+    padding-inline-start: 0px!important;
+}
 
   .govuk-inset-text-survey {
     font-family: "GDS Transport", arial, sans-serif;
@@ -180,11 +187,10 @@
     
   <!-- Blank header with no service name for this page -->
   
-
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <!--[if gt IE 8]><!-->
           <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
@@ -198,14 +204,16 @@
             GOV.UK
           </span>
         </span>
-        
       </a>
     </div>
-    
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__service-name">
+        Emergency Alerts
+      </a>
+    </div>
   </div>
 </header>
-
-
+  
 
     
       <div class="govuk-width-container ">
@@ -215,7 +223,7 @@
               beta
             </strong>
             <span class="govuk-phase-banner__text">
-              This is a new service.
+             This is a new service that is being trialled.
             </span>
           </p>
         </div>     
