@@ -30,9 +30,70 @@
 
   
 <style> 
-.alerts-icon alerts-icon--48 {
-  padding-right:50px;
+  
+  .hmrc-language-select__list {
+    float: left!important;
+    margin-top: 1em;
+    text-align: left!important;
+    padding-inline-start: 0px!important;
 }
+  
+  
+    .alerts-icon {
+    position: absolute;
+    left: 0;
+}
+.alerts-icon--48 {
+    top: -3px;
+    width: 32px;
+}
+@media (min-width: 40.0625em) {
+    .alerts-icon--48 {
+        top: 5px;
+        width: 48px;
+    }
+}
+.alerts-icon__container {
+    position: relative;
+}
+.alerts-icon__container--48 {
+    padding-left: 48px;
+    min-height: 32px;
+}
+@media (min-width: 40.0625em) {
+    .alerts-icon__container--48 {
+        padding-left: 72px;
+        min-height: 48px;
+    }
+}
+.govuk-heading-xl > .alerts-icon--48 {
+    top: -10px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-xl > .alerts-icon--48 {
+        top: -2px;
+    }
+}
+.govuk-heading-xl.alerts-icon__container--48 {
+    padding-left: 42px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-xl.alerts-icon__container--48 {
+        padding-left: 62px;
+    }
+}
+.alerts-alert {
+    position: relative;
+    padding-left: 72px;
+    min-height: 48px;
+}
+.alerts-alert__icon {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
 
   .govuk-inset-text-survey {
     font-family: "GDS Transport", arial, sans-serif;
@@ -112,6 +173,61 @@
         font-variant-numeric: tabular-nums;
     }
 }
+.app-content {
+    padding: 20px;
+}
+@media (min-width: 40.0625em) {
+    .app-content {
+        padding: 30px;
+    }
+}
+.app-content ul:not(.app-tabs) {
+    max-width: 38em;
+}
+.app-example {
+    background: #f3f2f1;
+    border: 1px solid #b1b4b6;
+    position: relative;
+}
+.app-example-page {
+    padding: 60px 30px 30px;
+}
+.app-example__link {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f3f2f1;
+    font-family: GDS Transport, arial, sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+@media print {
+    .app-example__link {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .app-example__link {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.42857;
+    }
+}
+@media print {
+    .app-example__link {
+        font-size: 12pt;
+        line-height: 1.2;
+    }
+}
+.app-example__link a {
+    color: #1d70b8;
+    text-decoration: none;
+}
 </style>
 
     
@@ -132,7 +248,7 @@
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <!--[if gt IE 8]><!-->
           <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
@@ -146,10 +262,13 @@
             GOV.UK
           </span>
         </span>
-        
       </a>
     </div>
-    
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__service-name">
+        Emergency Alerts
+      </a>
+    </div>
   </div>
 </header>
 
@@ -163,7 +282,7 @@
               beta
             </strong>
             <span class="govuk-phase-banner__text">
-              This is a new service.
+              Emergency Alerts is a new service that is being trialled.
             </span>
           </p>
         </div>      
@@ -188,9 +307,52 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Past emergency alerts
-      </h1>    
+        Current emergency alerts
+      </h1>
+      <h2 class="govuk-heading-m ">
+          Sunday 5 February 2023
+        </h2>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="alerts-icon__container alerts-icon__container--48">
+        
+  
+    
+    
+  
 
+  
+  
+    <!--[if gt IE 8]><!-->
+  
+  <svg class="alerts-icon alerts-icon--48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.9 48" aria-hidden="true" focusable="false" x="0" y="0" height="48" width="50.0"><path fill="#b1b4b6" d="M25.5 5.5l-20 35.9h39.9z"></path><path fill="#b1b4b6" d="M25.5 0c-2 0-3.9 1.1-4.8 2.9L.7 38.8c-1 1.7-.9 3.8.1 5.5C1.8 46 3.6 47 5.6 47h39.8c2 0 3.8-1 4.8-2.7 1-1.7 1-3.8.1-5.5l-20-35.9c-1-1.8-2.8-2.9-4.8-2.9z"></path><path d="M21.7 37.7c0-.5.1-1 .3-1.4.2-.4.5-.8.8-1.2.3-.3.7-.6 1.2-.8s1-.3 1.5-.3 1 .1 1.4.3c.4.2.8.5 1.2.8.3.3.6.7.8 1.2.2.4.3.9.3 1.4 0 .5-.1 1-.3 1.5-.2.5-.5.9-.8 1.2-.3.3-.7.6-1.2.8-.4.2-.9.3-1.4.3-.5 0-1-.1-1.5-.3s-.9-.5-1.2-.8c-.3-.3-.6-.7-.8-1.2-.2-.5-.3-1-.3-1.5zm0-24.6s-.8-3.9 3.7-3.9c4.7 0 3.7 3.9 3.7 3.9l-2.7 17.5h-2l-2.7-17.5z" fill="#fff"></path>
+  </svg>
+  
+    <!--<![endif]-->
+    <!--[if IE 8]>
+      <img src="/alerts/assets/images/alert-grey-4bff4a4c.png" height="48" width="50.0", alt="" class="alerts-icon alerts-icon--48" />
+    <![endif]-->
+  
+
+        <h3 class="alerts-alert__title govuk-heading-s govuk-!-margin-bottom-3">
+          
+            Mobile network operator test
+          
+        </h3>
+        
+  <p class="govuk-body-l govuk-!-margin-bottom-4">This is a mobile network operator test of the Emergency Alerts service. You do not need to take any action.</p>
+
+<p class="govuk-body-l govuk-!-margin-bottom-4">To find out more, search for <a class="govuk-link" href="http://gov.uk/alerts">gov.uk/alerts</a></p>
+
+        
+          <a href="/alerts/mobile-network-operator-tests" class="govuk-link govuk-body">
+            More information about mobile network operator tests
+          </a>
+        
+      </div>
+    </div>
+  </div>
       <!---<aside class="app-mainstream-guide-contents-list" role="complementary">
         <nav class="app-contents-list" aria-label="Pages in this guide" role="navigation">
           <h2 class="app-contents-list__title">
@@ -215,100 +377,22 @@
       </aside>--->
 
     </div>
-    <div class="govuk-grid-column-one-third">
-    <nav class="hmrc-language-select" aria-label="Language switcher">
-    <ul class="hmrc-language-select__list">
-      <li class="hmrc-language-select__list-item">
-        <span aria-current="true">English</span>
-      </li>
-      <li class="hmrc-language-select__list-item">
-        <a href="index-1.htm?cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
-          <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
-          <span aria-hidden="true">Cymraeg</span>
-        </a>
-      </li>
-    </ul>
-    </div>
-  </div>
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds app-mainstream-guide-body">
-      
-      <h2 class="govuk-heading-m ">(day) (date) (year)
-      </h2>
-  
-  <div class="govuk-grid-row">
-        <div class="alerts-icon__container alerts-icon__container--48">
-          
-    <!--[if gt IE 8]><!-->
-    
-      <svg class="alerts-icon alerts-icon--48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.9 48" aria-hidden="true" focusable="false" x="0" y="0" height="48" width="50.0"><path fill="#b1b4b6" d="M25.5 5.5l-20 35.9h39.9z"></path><path fill="#b1b4b6" d="M25.5 0c-2 0-3.9 1.1-4.8 2.9L.7 38.8c-1 1.7-.9 3.8.1 5.5C1.8 46 3.6 47 5.6 47h39.8c2 0 3.8-1 4.8-2.7 1-1.7 1-3.8.1-5.5l-20-35.9c-1-1.8-2.8-2.9-4.8-2.9z"></path><path d="M21.7 37.7c0-.5.1-1 .3-1.4.2-.4.5-.8.8-1.2.3-.3.7-.6 1.2-.8s1-.3 1.5-.3 1 .1 1.4.3c.4.2.8.5 1.2.8.3.3.6.7.8 1.2.2.4.3.9.3 1.4 0 .5-.1 1-.3 1.5-.2.5-.5.9-.8 1.2-.3.3-.7.6-1.2.8-.4.2-.9.3-1.4.3-.5 0-1-.1-1.5-.3s-.9-.5-1.2-.8c-.3-.3-.6-.7-.8-1.2-.2-.5-.3-1-.3-1.5zm0-24.6s-.8-3.9 3.7-3.9c4.7 0 3.7 3.9 3.7 3.9l-2.7 17.5h-2l-2.7-17.5z" fill="#fff"></path>
-    </svg>
-    
-      <!--<![endif]-->
-      <!--[if IE 8]>
-        <img src="/alerts/assets/images/alert-grey-4bff4a4c.png" height="48" width="50.0", alt="" class="alerts-icon alerts-icon--48" />
-      <![endif]-->
-    
-  
-          <h3 class="alerts-alert__title govuk-heading-s govuk-!-margin-bottom-3">
-            
-              Mobile network operator service test
-            
-          </h3>
-          
-    <p class="govuk-body-l govuk-!-margin-bottom-4">This is a mobile network operator test of the UK Emergency Alerts system.</p>
-    <p class="govuk-body-l govuk-!-margin-bottom-4">You do not need to take any action.</p>
-
-  <p class="govuk-body-l govuk-!-margin-bottom-4">For further information, visit <a class="govuk-link" href="http://gov.uk/alerts">gov.uk/alerts</a> and see Emergency Alerts service tests.</p>
-  
-          
-            <p>Find out more about <a href="system-testing" class="govuk-link govuk-body">
-              testing the Emergency Alerts system
-            </a>.</p>
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-20">
-     
-        </div>
-        <h2 class="govuk-heading-m ">
-          (day) (date) (year)
-        </h2>
-        <div class="alerts-icon__container alerts-icon__container--48">
-          
-          <!--[if gt IE 8]><!-->
-          
-            <svg class="alerts-icon alerts-icon--48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.9 48" aria-hidden="true" focusable="false" x="0" y="0" height="48" width="50.0"><path fill="#b1b4b6" d="M25.5 5.5l-20 35.9h39.9z"></path><path fill="#b1b4b6" d="M25.5 0c-2 0-3.9 1.1-4.8 2.9L.7 38.8c-1 1.7-.9 3.8.1 5.5C1.8 46 3.6 47 5.6 47h39.8c2 0 3.8-1 4.8-2.7 1-1.7 1-3.8.1-5.5l-20-35.9c-1-1.8-2.8-2.9-4.8-2.9z"></path><path d="M21.7 37.7c0-.5.1-1 .3-1.4.2-.4.5-.8.8-1.2.3-.3.7-.6 1.2-.8s1-.3 1.5-.3 1 .1 1.4.3c.4.2.8.5 1.2.8.3.3.6.7.8 1.2.2.4.3.9.3 1.4 0 .5-.1 1-.3 1.5-.2.5-.5.9-.8 1.2-.3.3-.7.6-1.2.8-.4.2-.9.3-1.4.3-.5 0-1-.1-1.5-.3s-.9-.5-1.2-.8c-.3-.3-.6-.7-.8-1.2-.2-.5-.3-1-.3-1.5zm0-24.6s-.8-3.9 3.7-3.9c4.7 0 3.7 3.9 3.7 3.9l-2.7 17.5h-2l-2.7-17.5z" fill="#fff"></path>
-          </svg>
-          
-            <!--<![endif]-->
-            <!--[if IE 8]>
-              <img src="/alerts/assets/images/alert-grey-4bff4a4c.png" height="48" width="50.0", alt="" class="alerts-icon alerts-icon--48" />
-            <![endif]-->
-          
-        
-                <h3 class="alerts-alert__title govuk-heading-s govuk-!-margin-bottom-3">
-                  
-                  Emergency Alerts service test 
-                  
-                </h3>
-                
-          <p class="govuk-body-l govuk-!-margin-bottom-4">This is a government test of the UK Emergency Alerts system.</p>
-          <p class="govuk-body-l govuk-!-margin-bottom-4">You do not need to take any action.</p>
-      
-        <p class="govuk-body-l govuk-!-margin-bottom-4">For further information, visit <a class="govuk-link" href="http://gov.uk/alerts">gov.uk/alerts</a> and see Emergency Alerts service tests.</p>
-        
-                
-                  <p>Find out more about <a href="system-testing" class="govuk-link govuk-body">
-                    testing the Emergency Alerts system
-                  </a>.</p>
-                  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible govuk-!-margin-bottom-0">
-           
-              </div>
-      </div>
-    
-  
-    </div>
-
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-third" style="
+    margin-top: 180px;
+">
+      <nav class="hmrc-language-select" aria-label="Language switcher">
+      <ul class="hmrc-language-select__list">
+        <li class="hmrc-language-select__list-item">
+          <span aria-current="true">English</span>
+        </li>
+        <li class="hmrc-language-select__list-item">
+          <a href="index-1.htm?cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg">
+            <span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span>
+            <span aria-hidden="true">Cymraeg</span>
+          </a>
+        </li>
+      </ul>
+      </nav>
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
@@ -322,25 +406,24 @@
                 About Emergency Alerts
               </a>
             </li>
-            <li>
-              <a href="how-alerts-work.html">
-                How emergency alerts works
-              </a>
-            </li>
-            <li>
+    <li>
               <a href="system-testing.html">
                 Testing the Emergency Alerts system
               </a>
             </li>
-    
+    <li>
+              <a href="service-tests.html">
+                Emergency Alerts service tests
+              </a>
+            </li>
     <li>
               <a href="current-alerts">
                 Current emergency alerts
               </a>
             </li>
-            <li>
-              <a href="service-tests.html">
-                Emergency Alerts service tests
+     <li>
+              <a href="past-alerts">
+                Past emergency alerts
               </a>
             </li>
             
@@ -350,10 +433,17 @@
 
     </div>
 
+
+
+  </div>
+
+  <div class="govuk-grid-row">
+    
+
+    
+
   </div></main>
 </div>
-
-
 
     
   <footer class="govuk-footer " role="contentinfo">
