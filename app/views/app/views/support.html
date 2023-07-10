@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Support
+      </h1>
+
+      <p class="govuk-body">GOV.UK Emergency Alerts provides 24-hour online support.</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If it’s an emergency, we’ll reply within 30 minutes</li>
+  <li>If it’s not an emergency, we’ll reply within 1 working day</li>
+  <li>If it’s a question or feedback, we’ll reply within 3 working days</li>
+</ul>
+
+      <form class="form" action="/juggling-balls-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "how-many-balls",
+          fieldset: {
+            legend: {
+              text: "What do you need help with?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              href: "/page1",
+              value: "3 or more",
+              text: "I work in the public sector and need support with the Emergency Alerts service"
+            },
+            {
+              href: "/page2",
+              value: "1 or 2",
+              text: "I’m a member of the public with a question for the government"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

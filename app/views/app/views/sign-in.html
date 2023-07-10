@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="heading-large">Sign in</h1>
+     
+  <form method="post" novalidate="">
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="email_address">
+    Email address
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="email_address" name="email_address" type="email" spellcheck="false" autocomplete="email">
+</div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="password">
+    Password
+  </label>
+
+<input class="govuk-input govuk-!-width-two-thirds" id="password" name="password" type="password" autocomplete="current-password">
+</div>
+
+  <div class="page-footer">
+      <input type="hidden" name="csrf_token" value="IjdjOWRjOTAxNGM5MWI4YjNjNThlNDM1OTUzYWNmMDNhMmQ4ODU5OTMi.Y9p6aw.HRgmwohx07qeJ9Mp9BaciN7YbRc">
+
+<a href="/two-factor-sms.html" role="button" draggable="false" class="govuk-button page-footer__button" data-module="govuk-button">
+  Continue
+ </a>
+
+      <a class="govuk-link govuk-link--no-visited-state page-footer-secondary-link" href="forgot-password.html">Forgotten your password?</a>
+  </div>
+  </form>
+  </div>
+</div>
+        </main>
+      </div>
+
+    </div>
+  </div>
+  
+
+{% endblock %}

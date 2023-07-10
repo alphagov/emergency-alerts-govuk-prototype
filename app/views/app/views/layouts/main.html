@@ -1,0 +1,60 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block header %}
+{{ govukHeader({
+  homepageUrl: "sign-in",
+  serviceName: "Emergencey Alerts",
+  serviceUrl: "sign-in",
+  navigation: [
+    {
+      href: "support",
+      text: "Support",
+      active: true
+    },
+    {
+      href: "sign-in.html",
+      text: "Sign in"
+    }
+  ]
+}) }}
+{% endblock %}
+
+
+  
+{% block footer %}
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "https://www.gov.uk/alerts/privacy-notice",
+         text: "Privacy"
+       },
+       {
+         href: "https://www.gov.uk/help/accessibility-statement",
+         text: "Accessibility statement"
+       },
+       {
+         href: "https://www.gov.uk/help/terms-conditions",
+         text: "Terms of use"
+       },
+       {
+        href: "https://www.gov.uk/help/cookies",
+        text: "Cookies"
+      }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="/public/css/main.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-width-container ">
+
+    <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-12" id="main-content" role="main">
+
+
+      <h1 class="heading-large">Thanks for contacting us&ZeroWidthSpace;</h1>
+      <p class="govuk-body">We'll aim to read your message in the next 30 minutes and reply immediately if critical. 
+        </p>
+    
+    
+    
+            </main>
+
+
+
+
+  
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-width-container ">
+
+          <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-12" id="main-content" role="main">
+
+    <h1 class="heading-large" id="page-header">Contact GOV.UK Emergency Alerts support</h1>
+  
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          
+          
+    <form method="post" autocomplete="off" novalidate="" class="sticky-scroll-area">
+      
+              
+    <div class="form-group " data-notify-module="">
+      <label class="form-label" for="feedback">
+        
+          Your message
+        
+        
+        
+      </label>
+      
+        
+      
+      
+      <div class="textbox-highlight-wrapper"><textarea class="form-control form-control-1-1 textbox-highlight-textbox" data-highlight-placeholders="false" data-notify-module="enhanced-textbox" id="feedback" name="feedback" rows="10" style="height: 261.87px;"></textarea><div class="textbox-highlight-background" aria-hidden="true" style="border-width: 1.48148px; width: 628.657px;"></div></div>
+
+    </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="name">
+      Name (Optional)
+    </label>
+
+  <input class="govuk-input govuk-!-width-full" id="name" name="name" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="email_address">
+      Email address
+    </label>
+  
+  <input class="govuk-input govuk-!-width-full" id="email_address" name="email_address" type="email" spellcheck="false">
+  </div>
+  
+  
+      
+              
+              
+    <div class="js-stick-at-bottom-when-scrolling content-fixed content-fixed__bottom" style="width: 629.988px; bottom: 0px;">
+      
+    <div class="page-footer">
+      
+        <input type="hidden" name="csrf_token" value="Ijg0NWVlYzY1MTU1NTc3YzliOTE3ODEwY2ZiY2E4ZDU1ODVlZDJhMTMi.ZDftLQ.fx0Gpp3yHhnrpXk1q_0S2SUEZrM">
+
+
+
+  <a href="support-send.htm" role="button" draggable="false" class="govuk-button page-footer__button" data-module="govuk-button">
+    Send
+   </a>
+
+    </div>
+  
+    </div><div class="shim" style="height: 79.6667px; margin-top: -20px; margin-bottom: 0px;">&nbsp;</div>
+
+    </form>
+  
+        </div>
+      </div>
+  
+  
+  
+          </main>
+</div>
+
+
+
+
+  
+
+{% endblock %}
